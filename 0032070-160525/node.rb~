@@ -1,0 +1,25 @@
+class Node
+  def make_node(num, left, right)
+    Node.new(num, left, right)
+  end
+  
+  def value(tree)
+    tree.value
+  end
+  
+  def left(tree)
+    tree.left
+  end
+  
+  def right(tree)
+    tree.right
+  end
+  
+  def is_empty(tree)
+    tree == nil
+  end
+
+  def make_leaf(num)
+    Node.new(num, nil, nil)
+  end
+end

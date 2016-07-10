@@ -1,0 +1,15 @@
+def calc(tree)
+  if is_empty(left(tree)) == nil and is_empty(right(tree)) == nil
+    value(tree)
+  else
+    if value(tree) == "+"
+      calc(left(tree)) + calc(right(tree))
+    elsif value(tree) == "-"
+      calc(left(tree)) - calc(right(tree))
+    elsif value(tree) == "*"
+      calc(left(tree)) * calc(right(tree))
+    else
+      calc(left(tree)) / calc(right(tree))
+    end
+  end
+end

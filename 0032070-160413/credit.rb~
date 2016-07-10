@@ -1,0 +1,35 @@
+def issue(dt, dl, ic)
+  if dt/ic >= 0.28
+    return false
+
+  elsif dt/ic < 0.28 and dt/ic >= 0.20
+    if dl >= 1
+      return false
+    else
+      if ic >= 3000000
+        return true
+      else
+        return false
+      end
+    end
+
+  elsif dt/ic < 0.20
+    if dl >= 2
+      return false
+    elsif dl == 1
+      if ic >= 5000000
+        return true
+      else
+        return false
+      end
+    else
+      if ic >= 3000000
+        return true
+      else
+        return false
+      end
+    end
+  end
+end
+
+print issue(100000, 1, 6000000)

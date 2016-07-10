@@ -1,0 +1,35 @@
+class Player
+  def name
+  end
+  def play
+  end
+  def update(my_action, op_action)
+  end
+end
+
+class CooperatePlayer < Player
+  def name
+    "CooperatePlayer"
+  end
+  def play
+    Cooperate
+  end
+end
+
+class DefectPlayer < Player
+  def name
+    "DefectPlayer"
+  end
+  def play
+    Defect
+  end
+end
+
+class RandomPlayer < Player
+  def name
+    "RandomPlayer"
+  end
+  def play
+    (rand(2)%2 == 0) ? Cooperate : Defect
+  end
+end

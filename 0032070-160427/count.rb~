@@ -1,0 +1,17 @@
+a = [[1,1,1],[1,1,1],[1,1,1]]
+
+def count(field, r, c)
+  sum = 0
+  for i in -1..1
+    for j in -1..1
+      if (i != 0 and j != 0)
+        if is_living_cell(field, r+i, c+j)
+          sum += 1
+        end
+      end
+    end
+  end
+  return sum
+end
+
+p count(a, 1, 1)

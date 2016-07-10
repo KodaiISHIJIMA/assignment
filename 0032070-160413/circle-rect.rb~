@@ -1,0 +1,3 @@
+def in_rectangle(W, H, x, y, r)
+  pass
+end

@@ -1,0 +1,18 @@
+def koch(x0,y0,x1,y1,n)
+  if n == 0
+    [[x0,y0]]
+  else
+    x_s = (x1 - x0) / 3.0
+    y_s = (y1 - y0) / 3.0
+    x_u = x_s + (x_s - 3**(1/2.0)*y_s)/2.0
+    y_u = y_s + (3**(1/2.0)*x_s + y_s)/2.0
+    x_t = 2 * x_s
+    y_t = 2 * y_s
+    
+    koch(x0,y0,x_s,y_s,n-1) + koch(x_s,y_s,x_u,y_u,n-1) + koch(x_u,y_u,x_t,y_t,n-1) + koch(x_t,y_t,x1,y1,n-1)
+  end
+end
+
+a = koch(0,0,100,0,2)
+
+a.each{|x,y| printf("%.3f %.3f\n", x, y)}

@@ -1,0 +1,9 @@
+def add_node(tree, x)
+  if is_empty(tree)
+    make_leaf(x)
+  elsif x < value(tree)
+    make_node(value(tree), add_node(left(tree), x), right(tree))
+  else
+    make_node(value(tree), left(tree), add_node((right(tree), x))
+  end
+end

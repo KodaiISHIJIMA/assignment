@@ -1,0 +1,27 @@
+# coding: utf-8
+require 'json'
+load('./make_binary_search_tree.rb')
+
+def write_tree(filename, tree)
+  File.open(filename, "w"){|file|
+    file.puts tree.to_json
+  }
+end
+
+def read_tree(filename)
+  File.open(filename, "r"){|file|
+    file.each{|line|
+      return line
+    }
+  }
+end
+
+# test
+a = [3,1,6,1,7,9,2,0,5]
+tree = make_binary_search_tree(a)
+
+write_tree("writeTree.txt", tree)
+
+t = read_tree("writeTree.txt")
+p t
+p t[0]

@@ -1,0 +1,6 @@
+require 'open-uri'
+open("http://www.ecc.u-tokyo.ac.jp"){|f|
+  f.eacj_line{|line|
+    puts line
+  }
+}

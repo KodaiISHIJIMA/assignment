@@ -1,0 +1,38 @@
+# kaneko-sensei
+
+def make_term(c)
+  if c == "x"
+    lambda{|x|
+      x.to_i
+    }
+    
+  else
+    lambda{|x|
+      c.to_i
+    }
+  end
+end
+
+def parse_one(s)
+  lf = make_term(s[0])
+  op = s[1]
+  rf = make_term(s[2])
+  lambda{|x|
+    calculator(lf.call(x), op, rf.call(x))
+  }
+end
+
+def calculator(a, op, b)
+  if op == "+"
+    return a + b
+    
+  elsif op == "-"
+    return a - b
+
+  elsif op == "*"
+    return a * b
+
+  else
+    return a / b
+  end
+end

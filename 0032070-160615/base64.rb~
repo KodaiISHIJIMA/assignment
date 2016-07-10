@@ -1,0 +1,3 @@
+require 'base64'
+
+enc = Base64.encode64('石嶋')

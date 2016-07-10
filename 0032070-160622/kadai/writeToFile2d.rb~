@@ -1,0 +1,17 @@
+include Math
+
+def write_to_file2d(filename, x, y)
+  File.open(filename, "w"){ |file|
+    for i in 0..x.length-1
+      file.puts x[i], y[i]
+    end
+  }
+end
+
+x = (0..100).to_a
+
+for i in 0..x.length-1
+  y << sin(x/10.0)
+end
+
+write_to_file2d("writeToFile2d.txt", x, y)

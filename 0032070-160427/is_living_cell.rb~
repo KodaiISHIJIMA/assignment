@@ -1,0 +1,14 @@
+def inside(field, r, c)
+  h = field.length
+  w = field[0].length
+  # p h, w
+  0 <= r and r < h and 0 <= c and c < w
+end
+
+def is_living_cell(field, r, c)
+  if inside
+    return field[r-1, c-1]
+  else
+    return 0
+  end
+end

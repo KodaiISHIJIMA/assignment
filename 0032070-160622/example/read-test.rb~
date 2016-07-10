@@ -1,0 +1,5 @@
+File.open("file-test", "r"){ |file|
+  file.each{ |line|
+    puts line
+  }
+}

@@ -1,0 +1,46 @@
+def make_question_node(question, yes_branch, no_branch)
+
+end
+
+def question_text(qnode)
+  value(qnode)
+end
+
+def question_yes(qnode)
+  left(qnode)
+end
+
+def question_no(qnode)
+  right(qnode)
+end
+
+def make_answer_node(answer)
+  value(answer)
+end
+
+def answer_text(anode)
+  value(anode)
+end
+
+def is_question_node(node)
+  if is_empty(left(node)) == nil and is_empty(right(node)) == nil
+    return false
+  else
+    return true
+  end
+end
+
+def display(node)
+  if is_question_node(node) then
+    puts "Q:_"+question_text(node)+ "_?_[yn]"
+    yn = gets
+    if yn.downcase[0,1] == "y" then
+      display(question_yes(node))
+    else
+      display(question_no(node))
+    end
+  else
+    puts "---"
+    puts "Answer:_" + answer_text(node)
+  end
+end

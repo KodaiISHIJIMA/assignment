@@ -1,0 +1,16 @@
+Epsilon = 0.0001
+
+def sigmoid(x)
+  return 1/(1 + Math.exp(-x))
+end
+  
+def sigmoid_inverse(y,a,b)
+  m = (a+b)/2.0
+  if (y - sigmoid(m)).abs < Epsilon
+    return m
+  elsif y - sigmoid(m) > 0
+    return sigmoid_inverse(y,m,b)
+  else
+    return sigmoid_inverse(y,a,m)
+  end
+end

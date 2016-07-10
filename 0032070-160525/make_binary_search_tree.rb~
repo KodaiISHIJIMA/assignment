@@ -1,0 +1,6 @@
+def make_binary_search_tree(a)
+  tree = EmptyTree
+  for i in 0..a.length-1
+    tree = add_node(tree, i)
+  end
+end

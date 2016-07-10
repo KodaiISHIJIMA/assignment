@@ -1,0 +1,22 @@
+include Math
+
+def digit_sum(n)
+  sum = 0
+  digit = log10(n).floor+1
+  for i in 1..digit
+    sum += (n % 10**i) / 10**(i-1)
+  end
+  return sum
+end
+
+def lucky_array(n)
+  a = Array.new(n, false)
+  for i in 1..n-1
+    if i % 7 == 0
+      a[i] = true
+    elsif digit_sum(i) % 7 == 0
+      a[i] = true
+    end
+  end
+  a
+end

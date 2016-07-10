@@ -1,0 +1,12 @@
+def bs(a,x,l,r)
+  m = (l+r) / 2
+  if l + 1 == r and a[l] == x
+    return l
+  elsif l + 1 == r and a[l] != x
+    return -1
+  elsif l + 1 < r and a[m] > x
+    return bs(a,x,l,m)
+  else
+    return bs(a,x,m,r)
+  end
+end

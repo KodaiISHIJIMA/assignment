@@ -1,0 +1,7 @@
+def inorder(tree)
+  if is_empty(tree)
+    []
+  else
+    inorder(tree) + [value(tree)] + inorder(tree)
+  end
+end

@@ -1,0 +1,20 @@
+# coding: utf-8
+load('./observerPattern.rb')
+
+class CountdownClock < Observer
+  def initialize(subject)
+    super()
+    @subject = subject
+    @subject.attach(self)
+  end
+  def clock_to_string(clock)
+    #if clock.hour == 0 and clock.minute == 0 and clock.second == 0
+    #  sprint("!!!")
+    #else
+    sprintf("%02d:%02d:%02d", clock.hour, clock.minute, clock.second)
+    #end
+  end
+  def update
+    puts clock_to_string(@subject)
+  end
+end

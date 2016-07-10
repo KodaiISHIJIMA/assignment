@@ -1,0 +1,1 @@
+{"number":3,"left":{"number":1,"left":{"number":0,"left":null,"right":null},"right":{"number":1,"left":null,"right":{"number":2,"left":null,"right":null}}},"right":{"number":6,"left":{"number":5,"left":null,"right":null},"right":{"number":7,"left":null,"right":{"number":9,"left":null,"right":null}}}}

@@ -1,0 +1,16 @@
+def make2d(height, width)
+  a = Array.new(height)
+  for i in 0..height-1
+    a[i] = Array.new(width, 0)
+  end
+  a
+end
+
+def inside(field, r, c)
+  h = field.length
+  w = field[0].length
+  p h, w
+end
+
+a = make2d(5,5)
+inside(a,0,0)

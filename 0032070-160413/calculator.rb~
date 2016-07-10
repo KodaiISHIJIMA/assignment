@@ -1,0 +1,16 @@
+def calculator(a, op, b)
+  if op == "+"
+    return a + b
+    
+  elsif op == "-"
+    return a - b
+
+  elsif op == ":"
+    return a * b
+
+  else
+    return a / b
+  end
+end
+
+print calculator(1, "+", 2)

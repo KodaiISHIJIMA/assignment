@@ -1,0 +1,13 @@
+def erase_ta(x)
+  # x = x.gsub("ta","")
+  
+  for i in 0..x.size-1
+    if x[i,2] == "ta"
+      x[i,2] = ""
+    end
+  end
+  
+  return x
+end
+
+p erase_ta("tatotauktayotauttao")

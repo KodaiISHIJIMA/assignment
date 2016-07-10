@@ -1,0 +1,12 @@
+def factor(n)
+  a = []
+  for i in 1..n
+    if n % i == 0
+      a << i
+    end
+  end
+  return a
+end
+
+
+p factor(99)

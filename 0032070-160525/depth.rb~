@@ -1,0 +1,7 @@
+def depth(tree)
+  if is_empty(tree)
+    0
+  else
+    1 + depth(left(tree)) + depth(right(tree))
+  end
+end

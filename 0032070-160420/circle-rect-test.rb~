@@ -1,0 +1,13 @@
+require('test/unit')
+load('./circle-rect.rb')
+
+class TC_Area < Test::Unit::TestCase
+  def test_in_rectangle
+    assert_equal(true, in_rectangle(2,2,1,1,1))
+    assert_equal(true, in_rectangle(2,2,1,1,1))
+    assert_equal(true, in_rectangle(2,2,1,1,1))
+    assert_equal(true, in_rectangle(2,2,1,1,1))
+    assert_equal(true, in_rectangle(2,2,1,1,1))
+    assert_equal(true, in_rectangle(2,2,1,1,1))
+  end
+end

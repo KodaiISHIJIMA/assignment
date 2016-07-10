@@ -1,0 +1,10 @@
+require('test/unit')
+load('./prime_array.rb')
+
+class TC_Area < Test::Unit::TestCase
+  def test_prime_array
+    prime_numbers = [2,3,5,7,11,13,17,19,23,29]
+    assert_equal(prime_numbers, prime_array(30))
+  end
+end
+    

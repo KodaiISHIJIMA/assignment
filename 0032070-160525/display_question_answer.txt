@@ -1,0 +1,37 @@
+$ ruby display.rb
+Q:_Hungry_?_[yn]
+y
+---
+Answer:_cup noodle
+Q:_komaba_rikei_?_[yn]
+y
+Q:_gakusai_?_[yn]
+y
+Q:_Hissyu_?_[yn]
+y
+---
+Answer:_sougou
+
+$ ruby display.rb
+Q:_Hungry_?_[yn]
+n
+---
+Answer:_take a nap
+Q:_komaba_rikei_?_[yn]
+y
+Q:_gakusai_?_[yn]
+y
+Q:_Hissyu_?_[yn]
+n
+---
+Answer:_chikyu
+
+$ ruby display.rb
+Q:_Hungry_?_[yn]
+n
+---
+Answer:_take a nap
+Q:_komaba_rikei_?_[yn]
+n
+---
+Answer:_hongo or bunkei
